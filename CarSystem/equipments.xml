@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfEquipment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Equipment>
+    <Name>RTS</Name>
+    <Material>velur</Material>
+    <Conditioner>true</Conditioner>
+    <RDisc>16</RDisc>
+  </Equipment>
+  <Equipment>
+    <Name>RDS</Name>
+    <Material>cotton</Material>
+    <Conditioner>false</Conditioner>
+    <RDisc>13</RDisc>
+  </Equipment>
+</ArrayOfEquipment>

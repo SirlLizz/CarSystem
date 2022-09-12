@@ -21,6 +21,8 @@ namespace CarSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IEngineRepository, EngineRepository>();
+            services.AddSingleton<IEquipmentRepository, EquipmentRepository>();
+            //services.AddSingleton<ICarRepository, CarRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
