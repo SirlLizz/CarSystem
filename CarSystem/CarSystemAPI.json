@@ -1,0 +1,819 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CarSystem",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Car": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Getting all cars",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Adding car",
+        "requestBody": {
+          "description": "Added Car",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Deleting all cars",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Car/{model}": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Getting car by model",
+        "parameters": [
+          {
+            "name": "model",
+            "in": "path",
+            "description": "Car Model",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Car Model",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Changing car by model",
+        "parameters": [
+          {
+            "name": "model",
+            "in": "path",
+            "description": "Car Model",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Car Model",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Changeable Car",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Car"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Deleting car by model",
+        "parameters": [
+          {
+            "name": "model",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Engine": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Getting all engines",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Engine"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Engine"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Engine"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Adding engine",
+        "requestBody": {
+          "description": "Added Engine",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Deleting all engines",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Engine/{name}": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Getting engine by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Engine Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Engine Name",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Engine"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Engine"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Engine"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Changing engine by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Engine Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Engine Name",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Changeable Engine",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Engine"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Deleting engine by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Engine Name to delete",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Engine Name to delete",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Equipment": {
+      "get": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Getting all Equipments",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Equipment"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Equipment"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Equipment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Adding Equipment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Deleting all Equipments",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/{name}": {
+      "get": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Getting Equipment by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Equipment Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Equipment Name",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Equipment"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Equipment"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Equipment"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Changing Equipment by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Equipment Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Equipment Name",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Changeable Equipment",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Equipment"
+        ],
+        "summary": "Deleting Equipment by name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Equipment Name to delete",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Equipment Name to delete",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Car": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "Car's model",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "description": "Car's color",
+            "nullable": true
+          },
+          "engine": {
+            "type": "string",
+            "description": "Car's engine",
+            "nullable": true
+          },
+          "equipment": {
+            "type": "string",
+            "description": "Car's equipment",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "description": "Car's price",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Car"
+      },
+      "Engine": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Engine's model",
+            "nullable": true
+          },
+          "size": {
+            "type": "number",
+            "description": "Engine's size",
+            "format": "double"
+          },
+          "power": {
+            "type": "number",
+            "description": "Engine's power",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Engine"
+      },
+      "Equipment": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Equipment's name",
+            "nullable": true
+          },
+          "material": {
+            "type": "string",
+            "description": "Equipment's interior material",
+            "nullable": true
+          },
+          "conditioner": {
+            "type": "boolean",
+            "description": "Equipment's the presence of an air conditioner"
+          },
+          "rDisc": {
+            "type": "integer",
+            "description": "Equipment's disc radius",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Equipment"
+      }
+    }
+  }
+}
