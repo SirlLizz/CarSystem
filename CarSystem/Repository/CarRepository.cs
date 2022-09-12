@@ -15,7 +15,7 @@ namespace CarSystem.Repository
 
         public CarRepository()
         {
-            ReadFromFileCars();
+            _cars = new List<Car>();
         }
 
         public CarRepository(IConfiguration configuration)

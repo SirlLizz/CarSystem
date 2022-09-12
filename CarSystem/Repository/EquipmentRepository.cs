@@ -15,7 +15,7 @@ namespace CarSystem.Repository
 
         public EquipmentRepository()
         {
-            ReadFromFileEquipments();
+            _equipment = new List<Equipment>();
         }
 
         public EquipmentRepository(IConfiguration configuration)

@@ -15,7 +15,7 @@ namespace CarSystem.Repository
 
         public EngineRepository()
         {
-            ReadFromFileEngines();
+            _engines = new List<Engine>();
         }
 
         public EngineRepository(IConfiguration configuration)
