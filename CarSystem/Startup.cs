@@ -22,7 +22,7 @@ namespace CarSystem
         {
             services.AddSingleton<IEngineRepository, EngineRepository>();
             services.AddSingleton<IEquipmentRepository, EquipmentRepository>();
-            //services.AddSingleton<ICarRepository, CarRepository>();
+            services.AddSingleton<ICarRepository, CarRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

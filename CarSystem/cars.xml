@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Car>
+    <Model>Toyota GT86</Model>
+    <Color>red</Color>
+    <Engine>2JZ</Engine>
+    <Equipment>RTS</Equipment>
+    <Price>1900000</Price>
+  </Car>
+</ArrayOfCar>

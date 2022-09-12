@@ -17,11 +17,11 @@
         /// <summary>
         /// Car's engine
         /// </summary>
-        public Engine Engine { get; set; }
+        public string Engine { get; set; }
         /// <summary>
         /// Car's equipment
         /// </summary>
-        public Equipment Equipment { get; set; }
+        public string Equipment { get; set; }
         /// <summary>
         /// Car's price
         /// </summary>

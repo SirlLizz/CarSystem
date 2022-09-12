@@ -8,103 +8,108 @@ using System.Xml.Serialization;
 
 namespace CarSystem.Repository
 {
-    public class CarRepository
+    public class CarRepository : ICarRepository
     {
-        /*
-        private List<Engine> _engines;
+        private List<Car> _cars;
         private readonly string _fileName;
 
-        public EngineRepository()
+        public CarRepository()
         {
-            ReadFromFileEngines();
+            ReadFromFileCars();
         }
 
-        public EngineRepository(IConfiguration configuration)
+        public CarRepository(IConfiguration configuration)
         {
-            _fileName = configuration.GetValue<string>("EnginesFile");
-            ReadFromFileEngines();
+            _fileName = configuration.GetValue<string>("CarsFile");
+            ReadFromFileCars();
         }
 
-        public void ReadFromFileEngines()
+        public void ReadFromFileCars()
         {
             if (!File.Exists(_fileName))
             {
-                _engines = new List<Engine>();
+                _cars = new List<Car>();
                 return;
             }
-            XmlSerializer formatter = new(typeof(List<Engine>));
+            XmlSerializer formatter = new(typeof(List<Car>));
             using FileStream fileStream = new(_fileName, FileMode.OpenOrCreate);
-            _engines = (List<Engine>)formatter.Deserialize(fileStream);
+            _cars = (List<Car>)formatter.Deserialize(fileStream);
 
         }
 
-        public void WriteToFileEngines()
+        public void WriteToFileCars()
         {
-            XmlSerializer formatter = new(typeof(List<Engine>));
+            XmlSerializer formatter = new(typeof(List<Car>));
             using FileStream fileStream = new(_fileName, FileMode.Create);
-            formatter.Serialize(fileStream, _engines);
+            formatter.Serialize(fileStream, _cars);
         }
 
-        public string AddEngine(Engine engine)
+        public string AddCar(Car car)
         {
-            if (_engines.Any(e => e.Name == engine.Name && e.Size == engine.Size && e.Power == engine.Power))
+            if (_cars.Any(c => c.Model == car.Model && 
+            c.Color == car.Color && 
+            c.Engine == car.Engine && 
+            c.Equipment == car.Equipment && 
+            c.Price == car.Price) || car.Engine == null || car.Equipment == null)
             {
                 throw new ArgumentException();
             }
-            _engines.Add(engine);
-            WriteToFileEngines();
-            return engine.Name;
+            _cars.Add(car);
+            WriteToFileCars();
+            return car.Model;
         }
 
-        public string ReplaceEngine(string name, Engine newEngine)
+        public string ReplaceCar(string model, Car newCar)
         {
-            int engineIndex = _engines.FindIndex(engine => engine.Name == name);
+            int carIndex = _cars.FindIndex(engine => engine.Model == model);
 
-            if (engineIndex == -1)
+            if (carIndex == -1)
             {
                 throw new ArgumentException();
             }
-            Engine engine = _engines[engineIndex];
-            engine.Name = name;
-            engine.Size = newEngine.Size;
-            engine.Power = newEngine.Power;
-            WriteToFileEngines();
-            return name;
+            Car car = _cars[carIndex];
+            car.Model = model;
+            car.Color = newCar.Color;
+            car.Engine = newCar.Engine;
+            car.Equipment = newCar.Equipment;
+            car.Price = newCar.Price;
+            WriteToFileCars();
+            return model;
         }
 
-        public List<Engine> GetAllEngines()
+        public List<Car> GetAllCars()
         {
-            return _engines;
+            return _cars;
         }
 
-        public Engine GetEngine(string name)
+        public Car GetCar(string model)
         {
-            Engine engine = _engines.FirstOrDefault(e => e.Name == name);  
+            Car car = _cars.FirstOrDefault(e => e.Model == model);  
 
-            if (engine is null)
+            if (car is null)
             {
                 throw new ArgumentException();
             }
-            return engine;
+            return car;
         }
 
-        public string DeleteEngine(string name)
+        public string DeleteCar(string model)
         {
-            Engine engine = GetEngine(name);
+            Car car = GetCar(model);
 
-            if (engine == null)
+            if (car == null)
             {
                 throw new ArgumentException();
             }
-            _engines.Remove(engine);
-            WriteToFileEngines();
-            return name;
+            _cars.Remove(car);
+            WriteToFileCars();
+            return model;
         }
 
-        public void DeleteAllEngines()
+        public void DeleteAllCars()
         {
-            _engines.Clear();
-            WriteToFileEngines();
-        }*/
+            _cars.Clear();
+            WriteToFileCars();
+        }
     }
 }
