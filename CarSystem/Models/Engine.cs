@@ -3,6 +3,7 @@
     /// <summary>
     /// Engine
     /// </summary>
+    [System.Serializable]
     public class Engine
     {
         /// <summary>

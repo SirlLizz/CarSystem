@@ -3,6 +3,7 @@
     /// <summary>
     /// Equipment
     /// </summary>
+    [System.Serializable]
     public class Equipment
     {
         /// <summary>
