@@ -19,12 +19,6 @@
     <RDisc>0</RDisc>
   </Equipment>
   <Equipment>
-    <Name>ing</Name>
-    <Material>string</Material>
-    <Conditioner>true</Conditioner>
-    <RDisc>0</RDisc>
-  </Equipment>
-  <Equipment>
     <Name>ng</Name>
     <Material>string</Material>
     <Conditioner>true</Conditioner>

@@ -22,17 +22,24 @@
     <Price>0</Price>
   </Car>
   <Car>
-    <Model>sng</Model>
+    <Model>sg</Model>
     <Color>string</Color>
     <Engine>string</Engine>
     <Equipment>string</Equipment>
     <Price>0</Price>
   </Car>
   <Car>
-    <Model>sg</Model>
-    <Color>string</Color>
-    <Engine>string</Engine>
-    <Equipment>string</Equipment>
-    <Price>0</Price>
+    <Model>123</Model>
+    <Color>123</Color>
+    <Engine>312</Engine>
+    <Equipment>RDS</Equipment>
+    <Price>321</Price>
+  </Car>
+  <Car>
+    <Model>333</Model>
+    <Color>333</Color>
+    <Engine>312</Engine>
+    <Equipment>ing</Equipment>
+    <Price>321.444</Price>
   </Car>
 </ArrayOfCar>

@@ -49,21 +49,21 @@ namespace CarSystemClient
                         _ = equipmentWindow.ShowDialog();
                     }, RxApp.MainThreadScheduler);
                 }));
-                /*
-                cd.Add(ViewModel.CreateProduct.RegisterHandler(interaction =>
+                
+                cd.Add(ViewModel.CreateCar.RegisterHandler(interaction =>
                 {
-                    var productViewModel = new AddProductViewModel();
-                    var productWindow = new AddProductWindow
+                    var carViewModel = new CarViewModel();
+                    var carWindow = new CarWindow
                     {
                         Owner = this,
-                        ViewModel = productViewModel
+                        ViewModel = carViewModel
                     };
 
                     return Observable.Start(() =>
                     {
-                        _ = productWindow.ShowDialog();
+                        _ = carWindow.ShowDialog();
                     }, RxApp.MainThreadScheduler);
-                }));*/
+                }));
             });
         }
     }
