@@ -1,10 +1,38 @@
 <?xml version="1.0"?>
 <ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Car>
-    <Model>Toyota GT86</Model>
-    <Color>red</Color>
-    <Engine>@JZ</Engine>
-    <Equipment>MAX</Equipment>
-    <Price>1200000</Price>
+    <Model>string</Model>
+    <Color>string</Color>
+    <Engine>string</Engine>
+    <Equipment>string</Equipment>
+    <Price>0</Price>
+  </Car>
+  <Car>
+    <Model>sring</Model>
+    <Color>string</Color>
+    <Engine>string</Engine>
+    <Equipment>string</Equipment>
+    <Price>0</Price>
+  </Car>
+  <Car>
+    <Model>sing</Model>
+    <Color>string</Color>
+    <Engine>string</Engine>
+    <Equipment>string</Equipment>
+    <Price>0</Price>
+  </Car>
+  <Car>
+    <Model>sng</Model>
+    <Color>string</Color>
+    <Engine>string</Engine>
+    <Equipment>string</Equipment>
+    <Price>0</Price>
+  </Car>
+  <Car>
+    <Model>sg</Model>
+    <Color>string</Color>
+    <Engine>string</Engine>
+    <Equipment>string</Equipment>
+    <Price>0</Price>
   </Car>
 </ArrayOfCar>

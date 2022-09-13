@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ArrayOfEngine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Engine>
-    <Name>2JZ</Name>
-    <Size>3</Size>
-    <Power>230</Power>
+    <Name>string</Name>
+    <Size>0</Size>
+    <Power>0</Power>
   </Engine>
   <Engine>
-    <Name>JZ</Name>
-    <Size>2.4</Size>
-    <Power>200.5</Power>
+    <Name>sring</Name>
+    <Size>0</Size>
+    <Power>0</Power>
   </Engine>
 </ArrayOfEngine>

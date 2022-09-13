@@ -34,9 +34,9 @@ namespace CarSystemClient
         {
             return _openApiClient.Engine4Async(model, newEngine);
         }
-        public Task<string> DeleteEngine(string model)
+        public void DeleteEngine(string model)
         {
-            return _openApiClient.Engine5Async(model);
+            _openApiClient.Engine5Async(model);
         }
         public Task<ICollection<Car>> GetAllCars()
         {
@@ -58,9 +58,9 @@ namespace CarSystemClient
         {
             return _openApiClient.Car4Async(name, newCar);
         }
-        public Task<string> DeleteCar(string name)
+        public void DeleteCar(string name)
         {
-            return _openApiClient.Car5Async(name);
+            _openApiClient.Car5Async(name);
         }
         public Task<ICollection<Equipment>> GetAllEquipments()
         {
@@ -82,9 +82,9 @@ namespace CarSystemClient
         {
             return _openApiClient.Equipment4Async(name, newEquipment);
         }
-        public Task<string> DeleteEquipment(string name)
+        public void DeleteEquipment(string name)
         {
-            return _openApiClient.Equipment5Async(name);
+            _openApiClient.Equipment5Async(name);
         }
     }
 }

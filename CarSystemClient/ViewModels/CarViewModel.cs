@@ -2,5 +2,9 @@
 {
     public sealed class CarViewModel
     {
+        public CarViewModel()
+        {
+
+        }
     }
 }

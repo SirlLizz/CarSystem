@@ -44,9 +44,9 @@ namespace CarSystemClient.ViewModels
             await CreateEngine.Handle(Unit.Default);
         }
 
-        private async void DeleteEngineImpl()
+        private void DeleteEngineImpl()
         {
-            await _carSystemRepository.DeleteEngine(SelectedEngine.Name);
+            _carSystemRepository.DeleteEngine(SelectedEngine.Name);
             UpdateEngineTable();
         }
 
@@ -55,9 +55,9 @@ namespace CarSystemClient.ViewModels
             await CreateCar.Handle(Unit.Default);
         }
 
-        private async void DeleteCarImpl()
+        private void DeleteCarImpl()
         {
-            await _carSystemRepository.DeleteCar(SelectedCar.Model);
+            _carSystemRepository.DeleteCar(SelectedCar.Model);
             UpdateCarTable();
         }
 
@@ -66,9 +66,9 @@ namespace CarSystemClient.ViewModels
             await CreateEquipment.Handle(Unit.Default);
         }
 
-        private async void DeleteEquipmentImpl()
+        private void DeleteEquipmentImpl()
         {
-            await _carSystemRepository.DeleteEquipment(SelectedEquipment.Name);
+            _carSystemRepository.DeleteEquipment(SelectedEquipment.Name);
             UpdateEquipmentTable();
         }
 
