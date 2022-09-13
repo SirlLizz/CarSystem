@@ -13,8 +13,8 @@
         <Button Command="{Binding AddEquipment}" Grid.Column="1" Content="Add Equipment" HorizontalAlignment="Left" Margin="593,385,0,0" VerticalAlignment="Top" Height="45" Width="152" FontSize="16"/>
         <Button Command="{Binding AddCar}" Grid.Column="1" Content="Add Car" HorizontalAlignment="Left" Margin="220,385,0,0" VerticalAlignment="Top" Height="45" Width="182" FontSize="16"/>
         <DataGrid SelectedItem="{Binding SelectedEngine}" ItemsSource="{Binding SourceEngine}" IsReadOnly="True"  AutoGenerateColumns="True" Margin="23,26,853,151" Grid.ColumnSpan="2"/>
-        <DataGrid SelectedItem="{Binding SelectedEquipment}" ItemsSource="{Binding SourceEquipment}" IsReadOnly="True" AutoGenerateColumns="True" Margin="220,26,481,151" Grid.Column="1"/>
-        <DataGrid SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding SourceCar}" IsReadOnly="True" AutoGenerateColumns="True" Margin="593,26,157,151" Grid.Column="1"/>
+        <DataGrid SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding SourceCar}" IsReadOnly="True" AutoGenerateColumns="True" Margin="220,26,481,151" Grid.Column="1"/>
+        <DataGrid SelectedItem="{Binding SelectedEquipment}" ItemsSource="{Binding SourceEquipment}" IsReadOnly="True" AutoGenerateColumns="True" Margin="593,26,157,151" Grid.Column="1"/>
         <Button Command="{Binding UpdateTable}" Grid.Column="1" Content="Update Table" HorizontalAlignment="Left" Margin="919,26,0,0" VerticalAlignment="Top" Height="45" Width="117" FontSize="18"/>
         <Button Command="{Binding DeleteEngine}" Content="Delete Engine" HorizontalAlignment="Left" Margin="63,385,0,0" VerticalAlignment="Top" Height="45" Width="149" FontSize="16" Grid.Column="1"/>
         <Button Command="{Binding DeleteCar}" Grid.Column="1" Content="Delete Car" HorizontalAlignment="Left" Margin="407,385,0,0" VerticalAlignment="Top" Height="45" Width="177" FontSize="16"/>
