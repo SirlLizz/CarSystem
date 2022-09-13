@@ -34,22 +34,22 @@ namespace CarSystemClient
                         _ = engineWindow.ShowDialog();
                     }, RxApp.MainThreadScheduler);
                 }));
-                /*
-                cd.Add(ViewModel.CreateOrder.RegisterHandler(interaction =>
+                
+                cd.Add(ViewModel.CreateEquipment.RegisterHandler(interaction =>
                 {
-                    var orderViewModel = new AddOrderViewModel();
-                    var orderWindow = new AddOrderWindow
+                    var equipmentViewModel = new EquipmentViewModel();
+                    var equipmentWindow = new EquipmentWindow
                     {
                         Owner = this,
-                        ViewModel = orderViewModel
+                        ViewModel = equipmentViewModel
                     };
 
                     return Observable.Start(() =>
                     {
-                        _ = orderWindow.ShowDialog();
+                        _ = equipmentWindow.ShowDialog();
                     }, RxApp.MainThreadScheduler);
                 }));
-
+                /*
                 cd.Add(ViewModel.CreateProduct.RegisterHandler(interaction =>
                 {
                     var productViewModel = new AddProductViewModel();

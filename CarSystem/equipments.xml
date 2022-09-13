@@ -30,4 +30,16 @@
     <Conditioner>true</Conditioner>
     <RDisc>0</RDisc>
   </Equipment>
+  <Equipment>
+    <Name>RDS</Name>
+    <Material>123</Material>
+    <Conditioner>true</Conditioner>
+    <RDisc>321321</RDisc>
+  </Equipment>
+  <Equipment>
+    <Name>333</Name>
+    <Material>333</Material>
+    <Conditioner>false</Conditioner>
+    <RDisc>333</RDisc>
+  </Equipment>
 </ArrayOfEquipment>
