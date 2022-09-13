@@ -24,7 +24,7 @@ namespace CarSystemClient.ViewModels
         public Interaction<Unit, Unit> CreateEngine { get; } = new();
         public Interaction<Unit, Unit> CreateEquipment { get; } = new();
         public Interaction<Unit, Unit> CreateCar { get; } = new();
-        private CarSystemRepository _carSystemRepository = new();
+        private readonly CarSystemRepository _carSystemRepository = new();
 
         public MainWindowViewModel()
         {

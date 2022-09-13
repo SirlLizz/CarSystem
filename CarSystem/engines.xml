@@ -1,13 +1,8 @@
 <?xml version="1.0"?>
 <ArrayOfEngine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Engine>
-    <Name>string</Name>
-    <Size>0</Size>
-    <Power>0</Power>
-  </Engine>
-  <Engine>
-    <Name>sring</Name>
-    <Size>0</Size>
-    <Power>0</Power>
+    <Name>312</Name>
+    <Size>321.32</Size>
+    <Power>321</Power>
   </Engine>
 </ArrayOfEngine>

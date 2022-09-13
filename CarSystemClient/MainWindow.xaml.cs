@@ -1,6 +1,7 @@
 ﻿
 using CarSystemClient.ViewModels;
 using ReactiveUI;
+using System.Reactive.Linq;
 
 namespace CarSystemClient
 {
@@ -19,21 +20,21 @@ namespace CarSystemClient
                 if (ViewModel is null)
                     return;
 
-                /*cd.Add(ViewModel.CreateCustomer.RegisterHandler(interaction =>
+                cd.Add(ViewModel.CreateEngine.RegisterHandler(interaction =>
                 {
-                    var customerViewModel = new AddCustomerViewModel();
-                    var customerWindow = new AddCustomerWindow
+                    var engineViewModel = new EngineViewModel();
+                    var engineWindow = new EngineWindow
                     {
                         Owner = this,
-                        ViewModel = customerViewModel
+                        ViewModel = engineViewModel
                     };
 
                     return Observable.Start(() =>
                     {
-                        _ = customerWindow.ShowDialog();
+                        _ = engineWindow.ShowDialog();
                     }, RxApp.MainThreadScheduler);
                 }));
-
+                /*
                 cd.Add(ViewModel.CreateOrder.RegisterHandler(interaction =>
                 {
                     var orderViewModel = new AddOrderViewModel();
